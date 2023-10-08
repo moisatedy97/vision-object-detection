@@ -1,0 +1,35 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "BOOK.arobject"
+    },
+    {
+      "filename" : "Bottoni.arobject"
+    },
+    {
+      "filename" : "CELL6.arobject"
+    },
+    {
+      "filename" : "Cella5.arobject"
+    },
+    {
+      "filename" : "HarryBook.arobject"
+    },
+    {
+      "filename" : "KUKA.arobject"
+    },
+    {
+      "filename" : "Pallet.arobject"
+    },
+    {
+      "filename" : "RobotABB.arobject"
+    },
+    {
+      "filename" : "RobotUr.arobject"
+    }
+  ]
+}

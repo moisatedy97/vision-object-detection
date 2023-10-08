@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs32 \cf0 \ul \ulc0 DOCUMENTAZIONE
+\f1\b0\fs28 \ulnone \
+L\'92applicazione si propone come obiettivo principe quello di creare una piccola esperienza di realt\'e0 aumentata.\
+Nello specifico essa  riconosce alcuni oggetti del mondo reale caricati in precedenza dallo sviluppatore, li identifica e ne mostra alcune caratteristiche. Nel proseguimento del documento verranno analizzati tutti i file che compongono l\'92intero progetto, i quali per scelta e per semplicit\'e0 sono semplici estensioni della classe principale ViewController.swift e sono stati creati per chiarezza di codice e per rendere pi\'f9 semplice lo sviluppo dell\'92applicazione.\
+\
+\
+
+\f0\b \ul ViewController.swift\ulnone \
+
+\f1\b0 ViewController \'e8 il file principale del progetto:  all\'92inizio del codice vengono dichiarate tutte le variabili globali che ci serviranno per le funzioni ed \'e8 da tenere a mente che in generale le variabili che vogliamo dichiarare fuori dal corpo di una funzione devono essere dichiarate solo ed esclusivamente in questo file in quanto non \'e8 possibile farlo nelle estensioni.\
+Dopo le dichiarazioni generali appaiono 3 funzioni: viewDidLoad(), viewWillAppear() e viewWillDisappear che sono 3 funzioni base che si occupano di inizializzare la scena all\'92avvio dell\'92applicazione.\
+La funzione renderer() \'e8 invece la funzione che si occupa del riconoscimento; essa quando un oggetto del mondo reale trova riscontro in uno dei file .arobject (presenti nella cartella Assets.xcassets) creati in precedenza con l\'92iPad entra in funzione, salva le caratteristiche dell\'92oggetto e chiama la funzione che mostra all\'92utente i risultati ottenuti.\
+L\'92ultima funzione \'e8 la funzione didTouchSnapshotButton() che al tocco di un bottone crea un\'92istantanea  della scena. E\'92 da notare che tutti gli oggetti 3d caricati nella scena, cos\'ec come gli oggetti del mondo reale, vengono fotografati e salvati, ma gli oggetti statici che sono prettamente parte della sola applicazione e non della scena non vengono presi in considerazione (es. View, UILabel, UIButton). \
+
+\f0\b \
+\
+\ul ViewControllerModel.swift\ulnone \
+
+\f1\b0 In questo file viene implementata la funzione che carica il modello 3d dell\'92oggetto rilevato nella scena (inserito nella stessa posizione in cui si trova l\'92oggetto). Dato che la scansione fatta dall\'92iPad e il modello 3d, situato nella cartella UsdzFile, sono chiamati con lo stesso nome posso passare semplicemente il nome dell\'92oggetto che ho gi\'e0 ricavato dalla funzione renderer e caricare senza problemi il modello 3d. In questa funzione sono previsti anche controlli per i casi limite in cui l\'92utente tenti di aggiungere un modello quando non \'e8 ancora stato rilevato un oggetto oppure i casi in cui l\'92utente tenti di aggiungere un modello 3d nonostante esso sia gi\'e0 presente nella scena. Per tutti i restanti casi l\'92inserimento \'e8 sempre consentito in quanto anche dopo aver resettato la scena l\'92applicazione tiene memoria dell\'92ultimo oggetto scantinato ed \'e8 ancora possibile vederne le informazioni, caricare il modello 3d ed i suoi componenti.\
+La scelta della tipologia di file per i modelli 3d \'e8 ricaduta sul formato .usdz; questo formato \'e8 stato creato da Apple in concomitanza con Pixar e sembra funzionare bene; inoltre viene spesso citato nella documentazione Apple e potrebbe rivelarsi utile anche per altri utilizzi.
+\f0\b \
+\
+\
+\ul ViewControllerComponents.swift\ulnone \
+
+\f1\b0 In questo file vengono implementate le funzioni che caricano i componenti dell\'92oggetto nella scena. Questa parte di progetto \'e8 pensata per il semplice fatto che pu\'f2 essere interessante, per molti macchinari, mostrarne i componenti interni. Questo per\'f2 rende questa parte pi\'f9 complicata rispetto alla precedente, che per ogni oggetto caricava un solo modello 3d, in quanto ogni macchinario avr\'e0 il suo quantitativo di componenti, che appariranno in diversi punti della scena e ci saranno anche macchinari che addirittura non presenteranno  componenti. A questo punto la mia scelta \'e8 stata quella di creare uno switch sul nome dell\'92oggetto rilevato che per ogni caso prendesse una funzione diversa e specifica.\
+Sono anche qui considerati i casi limite in cui l\'92utente prema il bottone senza aver rilevato alcun oggetto o i casi in cui tenti di inserire altri componenti 3d nonostante essi siano gi\'e0 stati inseriti.\
+Le singole funzioni che materialmente fanno apparire i componenti nella scena sono del tutto analoghe alle funzioni del file ViewControllerModel.swift, ma semplicemente pi\'f9 estese in quanto passano da caricare 0 modelli a caricarne n.
+\f0\b \
+\
+\
+\ul \ulc2 ViewControllerFlash.swift\ulnone \
+
+\f1\b0 In questo file vengono implementate 2 funzioni per il corretto funzionamento della torcia.\
+La funzione didTouchFlashButton() semplicemente riceve l\'92azione compiuta dall\'92utente e decide quando \'e8 il momento di accendere/spegnere la torcia. La funzione che invece si occupa veramente dell\'92illuminazione \'e8 la funzione flash(). Essa all\'92inizio fa dei controlli per verificare che ci sia la torcia e che sia abilitata ad essere utilizzata (in caso negativo ritorna sulla console l\'92errore in questione) ed in base al parametro booleano \'91on\'92, passato come argomento della funzione, decide se true di accendere il flash o in caso contrario false di spegnerlo.\
+A mio parere questa funzione \'e8 particolarmente importante; nei momenti di scarsa illuminazione con l\'92ausilio della torcia \'e8 comunque possibile riconoscere in maniera efficace l\'92oggetto ed inoltre la torcia andr\'e0 anche ad illuminare gli oggetti 3d caricati dall\'92utente nella scena.\
+
+\f0\b \
+\
+\ul ViewControllerReset.swift\ulnone \
+
+\f1\b0 In questo file vengono implementate 2 funzioni che puliscono la scena ed \'e8 importante capire che esse puliscono, ma non la resettano completamente. Questo avviene perch\'e9 non ha molto senso ogni volta riavviare completamente la scena creata, ricreando una nuova origine ed andando a perdere tutti i valori e le posizioni degli oggetti nel mondo reale, ma ha pi\'f9 senso eliminare semplicemente i riferimenti agli oggetti 3d caricati in modo che non appaiano pi\'f9 sulla scena, ma che, grazie ai valori memorizzati dall\'92app, possano essere ricaricati nuovamente. Questo inoltre va incontro alle esigenze di un utente che prima carica il modello 3d dell\'92oggetto rilevato e poi vuole caricare i suoi componenti togliendo il modello 3d dal centro della scena. Se andassimo a resettare la scena completamente perderemmo i punti di riferimento della scena stessa e nonostante abbiamo mantenuto in memoria i valori del modello caricato non potremmo pi\'f9 caricarlo nella posizione corretta in quanto l\'92origine di riferimento della scena sar\'e0 cambiata.\
+La funzione resetTracking() si occupa di queste procedure (se si vuole resettare comunque la scena basta aggiungere l\'92estensione .resetTracking() nel punto che ho gi\'e0 indicato nel codice).\
+
+\f0\b \
+\
+\ul ViewControllerMessage.swift\ulnone \
+
+\f1\b0 In questo file vengono inserite le UILabel che in tempo reale mostreranno all\'92utente le informazioni che verranno carpite man mano dagli oggetti rilevati. A questo scopo sono state create 4 UILabel differenti. Le ultime 2 sono create separate, anche se sono praticamente identiche come caratteristiche, con l\'92unica differenza del testo, per cercare di migliorare l\'92esperienza dell\'92utente (nel codice ci sono maggiori dettagli) e vengono inizializzate dalle funzioni initScaleMoveLabel() e initRotateLabel() e gestite dalla funzione showMessageGesture(Message: String) che le chiama. E\'92 da notare che mentre la ScaleMoveLabel scompare dopo pochi secondi, la RotateLabel \'e8 pensata per accompagnare l\'92utente durante tutto l\'92arco del movimento in modo da fargli capire effettivamente che pu\'f2 o sta ancora ruotando l\'92oggetto.\
+La MessageLabel, inizializzata dalla funzione initMessageLabel(), \'e8  dinamica e man mano che l\'92utente utilizza l\'92applicazione si aggiorna e varia di dimensione per far spazio a pi\'f9 o meno righe di testo attraverso la funzione dynamicHeight(). Dato che la modifica dell\'92altezza a run time \'e8 una cosa che pu\'f2 causare problemi con le thread \'e8 stata creata una label di altezza definita che viene chiamata solamente quando l\'92utente rileva un oggetto ed entra in azione la funzione renderer().\
+Il compito di renderete visibili queste 2 UILabel \'e8 affidato alla funzione Message(this: String) -> String: essa riceve un parametro che mi fa capire in quale stato \'e8 l\'92applicazione e che informazioni devo mostrare e ritorna il testo corretto che deve essere visualizzato dall\'92utente.\
+Per evitare ulterioiri problemi con le thread ho disabilitato il Main Thread Checker (product -> scheme -> edit scheme -> spuntare Runtime API Checking) nella fase di stesura del codice. Quando si fa girare l\'92applicazione sull\'92ipad, nella fase di riconoscimento, vengono fatti una serie di controlli che bloccano l\'92applicazione per alcuni secondi, mentre se lo si disabilita non vengono eseguiti. E\'92 comunque importante farli almeno una volta quando il codice \'e8 funzionante e poi \'e8 possibile riattivarli in quanto quando l\'92app \'e8 caricata sull\'92iPad e non si avranno pi\'f9 questi problemi.\
+
+\f0\b \
+\
+\ul ViewControllerAlert.swift\ulnone \
+
+\f1\b0 In questo file vengono presentate le funzioni per far apparire un alert al centro dello schermo. Queste dispongono il messaggio in modo tale che si possa inserire un titolo, un messaggio e 2 bottoni (\'93OK\'94 /  \'93Cancel\'94) e si pu\'f2 anche scegliere di omettere il bottone \'93Cancel\'94.\
+I bottoni finora sono sempre stati utilizzati in modo passivo nel senso che non erano collegati a nessuna azione poich\'e9 lo scopo generale dell\'92alert \'e8 semplicemente quello di informare l\'92utente che \'e8 appena successo qualcosa all\'92interno dell\'92applicazione (Es. scena resettata o creazione di un\'92istantanea).
+\f0\b \
+\
+\
+\ul Gesture.swift\ulnone \
+
+\f1\b0 In questo file vengono implementati i movimenti (UIGesture) che possono essere eseguiti sui modelli 3d che vengono caricati nella scena attraverso 5 funzioni. \
+La prima \'e8 la funzione GestureRecognizer(): qui vengono dichiarati i vari gestori dei movimenti (uno per ogni gesto/movimento) e vengono collegati alla scena; questa funzione viene chiamata nella funzione viewDidLoad() in modo tale che quando viene inizializzata la scena viene anche indicato che su di essa sono presenti delle UIGesture. Ad ogni gestore dei movimenti viene assegnata una funzione che implementa il movimento desiderato. \
+I movimenti permessi sui modelli 3d caricati sono 3:\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\uc0\u8226 	}scale: con 2 tocchi contemporanei di direzione uno opposto all\'92altro \'e8 possibile aumentare la dimensione del modello in questione o viceversa;\
+{\listtext	\uc0\u8226 	}move: con un tocco continuo in ogni direzione \'e8 possibile spostare il modello 3d nella scena;\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f0\b \cf0 {\listtext	\uc0\u8226 	}
+\f1\b0 rotate: con 2 tocchi contemporanei nella stessa direzione \'e8 possibile ruotare sugli assi x, y, z il modello in questione.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Le funzioni move e rotate sono implementate entrambe con UIPanGestureRecognizer; questo crea dei problemi in quanto al verificarsi dello stesso movimento potrebbero attivarsi 2 funzioni differenti. Per questo motivo il movimento dell\'92oggetto viene implementato con un tocco, mentre la rotazione dell\'92oggetto viene implementata attraverso 2 tocchi. Inoltre il tutto viene subordinato ad un evento precedente: se l\'92utente vuole ruotare l\'92oggetto deve prima cliccare per qualche secondo sull\'92oggetto desiderato e solo successivamente si attiva la rotazione. Per questo motivo \'e8 stata creata la funzione longPress.\
+Senza questi accorgimenti e la funzione per il tocco prolungato l\'92applicazione non ritornerebbe alcun errore, ma durante l\'92utilizzo scambierebbe la rotazione per il movimento e viceversa, a seconda di quale funzione viene implementata prima nel codice sorgente, inoltre secondo me i movimenti fatti in questo modo risultano pi\'f9 efficaci in quanto se voglio ruotare un oggetto voglio che ruoti su un asse fisso e che non abbia alcun movimento perci\'f2 ha senso permettere solo la rotazione e bloccare, fino a quando non si \'e8 finita l\'92operazione, gli altri movimenti.
+\f0\b \
+\
+\
+\ul Main.storyboard\ulnone \
+
+\f1\b0 Questa \'e8 una sezione dinamica del progetto nella quale \'e8 possibile vedere l\'92insieme di tutti gli elementi che sono caricati nella scena (View principale e non, bottoni e label). Tutti questi elementi dopo essere stati creati (per vedere tutti gli elementi disponibili premere la + in alto a destra e selezionare l\'92elemento desiderato sullo schermo del dispositivo) devono essere collegati alla classe ViewController.swift, dichiarati e inizializzati (per collegare un elemento al codice \'e8 necessario aprire l\'92assistant, tasto destro sull\'92elemento e trascinare l\'92operazione desiderata nel codice. Un\'92operazione simile viene svolta in questo esempio: https://www.youtube.com/watch?v=GeyPiI-_unY).\
+In pratica questa sezione ci mostra un\'92anteprima dell\'92applicazione.\
+
+\f0\b \
+\
+\ul Assets.xcassets\ulnone \
+
+\f1\b0 Questa parte di progetto \'e8 una sezione nella quale vengono caricati i singoli file .arobject che sono stati in precedenza caricati con l\'92arkit Scanner tramite iPad. In questo modo nel codice facciamo riferimento al gruppo ArObject che \'e8 l\'92insieme delle scansioni che fungono da \'93sorgente\'94 quando svolgiamo l\'92operazione di riconoscimento.\
+E\'92 importante in questa sezione chiamare i singoli file del gruppo con lo stesso nome con il quale \'e8 stato chiamato il modello 3d (file .usdz) che successivamente caricheremo nella scena.
+\f0\b \
+\
+\
+\
+NOTA: 
+\f1\b0 per creare un file .usdz la mia scelta \'e8 stata quella di modificare inizialmente il modello 3d creato dalla Struture sensor tramite blender. Esportare da esso un file .glb e solo successivamente passando questo nuovo file nell\'92applicazione Reality Converter ho creato un file .usdz. Questo passaggio mi permetteva di mantenere i materiali e quindi i colori sull\'92oggetto.\
+
+\f0\b \
+\
+\
+}

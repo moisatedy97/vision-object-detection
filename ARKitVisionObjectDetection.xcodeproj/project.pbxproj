@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF3B344425F92A6B00C1FE2B /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B344325F92A6B00C1FE2B /* SettingCell.swift */; };
+		EF3B344725F92BA600C1FE2B /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B344625F92BA600C1FE2B /* BaseCell.swift */; };
+		EF3B344E25F92DE900C1FE2B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B344D25F92DE900C1FE2B /* Extensions.swift */; };
+		EF4B8CF424D5AB5F00071EAD /* labelDefault.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8CF324D5AB5F00071EAD /* labelDefault.sks */; };
+		EF60817024CF181600D6A533 /* labelBook.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF60816F24CF181600D6A533 /* labelBook.sks */; };
+		EF703E82260500BE00CE15B5 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF703E81260500BE00CE15B5 /* Setting.swift */; };
+		EF78128425541367002BD4B3 /* pallet.usdz in Resources */ = {isa = PBXBuildFile; fileRef = EF78128325541367002BD4B3 /* pallet.usdz */; };
+		EF781287255414DC002BD4B3 /* bottoni.usdz in Resources */ = {isa = PBXBuildFile; fileRef = EF781286255414DC002BD4B3 /* bottoni.usdz */; };
+		EF7B384B272979B70090FFB5 /* ViewControllerExplode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7B384A272979B70090FFB5 /* ViewControllerExplode.swift */; };
+		EF7CD64024B608C80011442D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CD63F24B608C80011442D /* AppDelegate.swift */; };
+		EF7CD64424B608C80011442D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CD64324B608C80011442D /* ViewController.swift */; };
+		EF7CD64724B608C80011442D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7CD64524B608C80011442D /* Main.storyboard */; };
+		EF7CD64924B608CD0011442D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7CD64824B608CD0011442D /* Assets.xcassets */; };
+		EF7CD64C24B608CD0011442D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7CD64A24B608CD0011442D /* LaunchScreen.storyboard */; };
+		EF84658B25A74F7F0098CD86 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF84658A25A74F7F0098CD86 /* Gesture.swift */; };
+		EF867A4925AF2D340087125B /* ViewControllerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF867A4825AF2D340087125B /* ViewControllerMessage.swift */; };
+		EF8A3F9F2591FB4E004D9312 /* Book.usdz in Resources */ = {isa = PBXBuildFile; fileRef = EF8A3F9E2591FB4E004D9312 /* Book.usdz */; };
+		EF8A3FA22592018E004D9312 /* ViewControllerComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8A3FA12592018E004D9312 /* ViewControllerComponents.swift */; };
+		EF8A8D1A25B74E660094B66A /* ViewControllerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8A8D1925B74E660094B66A /* ViewControllerInfo.swift */; };
+		EF8F2FC5259B3EE800A66900 /* ViewControllerFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F2FC4259B3EE800A66900 /* ViewControllerFlash.swift */; };
+		EF8F2FCD259B49F000A66900 /* ViewControllerReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F2FCC259B49F000A66900 /* ViewControllerReset.swift */; };
+		EF8F2FD0259B4AC800A66900 /* ViewControllerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F2FCF259B4AC800A66900 /* ViewControllerAlert.swift */; };
+		EF8F2FD4259B804F00A66900 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F2FD3259B804F00A66900 /* ViewControllerModel.swift */; };
+		EFC2C08525C021C20075BED2 /* ScreenSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EFC2C08425C021C20075BED2 /* ScreenSound.mp3 */; };
+		EFE73B3D25FA67F8008D6DA7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7CD64124B608C80011442D /* art.scnassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF3B344325F92A6B00C1FE2B /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		EF3B344625F92BA600C1FE2B /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		EF3B344D25F92DE900C1FE2B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EF4B8CF324D5AB5F00071EAD /* labelDefault.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = labelDefault.sks; sourceTree = "<group>"; };
+		EF60816F24CF181600D6A533 /* labelBook.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = labelBook.sks; sourceTree = "<group>"; };
+		EF703E81260500BE00CE15B5 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		EF78128325541367002BD4B3 /* pallet.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pallet.usdz; sourceTree = "<group>"; };
+		EF781286255414DC002BD4B3 /* bottoni.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = bottoni.usdz; sourceTree = "<group>"; };
+		EF7B384A272979B70090FFB5 /* ViewControllerExplode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExplode.swift; sourceTree = "<group>"; };
+		EF7CD63C24B608C80011442D /* ARKitVisionObjectDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitVisionObjectDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7CD63F24B608C80011442D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF7CD64124B608C80011442D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		EF7CD64324B608C80011442D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF7CD64624B608C80011442D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF7CD64824B608CD0011442D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF7CD64B24B608CD0011442D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF7CD64D24B608CD0011442D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF84658A25A74F7F0098CD86 /* Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		EF867A4825AF2D340087125B /* ViewControllerMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMessage.swift; sourceTree = "<group>"; };
+		EF8A3F9E2591FB4E004D9312 /* Book.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Book.usdz; sourceTree = "<group>"; };
+		EF8A3FA12592018E004D9312 /* ViewControllerComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerComponents.swift; sourceTree = "<group>"; };
+		EF8A8D1925B74E660094B66A /* ViewControllerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfo.swift; sourceTree = "<group>"; };
+		EF8F2FC4259B3EE800A66900 /* ViewControllerFlash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFlash.swift; sourceTree = "<group>"; };
+		EF8F2FCC259B49F000A66900 /* ViewControllerReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReset.swift; sourceTree = "<group>"; };
+		EF8F2FCF259B4AC800A66900 /* ViewControllerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAlert.swift; sourceTree = "<group>"; };
+		EF8F2FD3259B804F00A66900 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		EFC2C08425C021C20075BED2 /* ScreenSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ScreenSound.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7CD63924B608C80011442D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF49E56F254858E500D87D81 /* UsdzFile */ = {
+			isa = PBXGroup;
+			children = (
+				EF8A3F9E2591FB4E004D9312 /* Book.usdz */,
+			);
+			path = UsdzFile;
+			sourceTree = "<group>";
+		};
+		EF5360502582303500C9C495 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				EF60816F24CF181600D6A533 /* labelBook.sks */,
+				EF4B8CF324D5AB5F00071EAD /* labelDefault.sks */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		EF78127A25540FAF002BD4B3 /* UsdLab */ = {
+			isa = PBXGroup;
+			children = (
+				EF781286255414DC002BD4B3 /* bottoni.usdz */,
+				EF78128325541367002BD4B3 /* pallet.usdz */,
+			);
+			path = UsdLab;
+			sourceTree = "<group>";
+		};
+		EF7CD63324B608C80011442D = {
+			isa = PBXGroup;
+			children = (
+				EF7CD63E24B608C80011442D /* ARKitVisionObjectDetection */,
+				EF7CD63D24B608C80011442D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7CD63D24B608C80011442D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7CD63C24B608C80011442D /* ARKitVisionObjectDetection.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7CD63E24B608C80011442D /* ARKitVisionObjectDetection */ = {
+			isa = PBXGroup;
+			children = (
+				EF7CD63F24B608C80011442D /* AppDelegate.swift */,
+				EF7CD64324B608C80011442D /* ViewController.swift */,
+				EF8F2FD3259B804F00A66900 /* ViewControllerModel.swift */,
+				EF8A3FA12592018E004D9312 /* ViewControllerComponents.swift */,
+				EF8F2FC4259B3EE800A66900 /* ViewControllerFlash.swift */,
+				EF8F2FCC259B49F000A66900 /* ViewControllerReset.swift */,
+				EF867A4825AF2D340087125B /* ViewControllerMessage.swift */,
+				EF8A8D1925B74E660094B66A /* ViewControllerInfo.swift */,
+				EF8F2FCF259B4AC800A66900 /* ViewControllerAlert.swift */,
+				EF7B384A272979B70090FFB5 /* ViewControllerExplode.swift */,
+				EF703E81260500BE00CE15B5 /* Setting.swift */,
+				EF84658A25A74F7F0098CD86 /* Gesture.swift */,
+				EF3B344625F92BA600C1FE2B /* BaseCell.swift */,
+				EF3B344D25F92DE900C1FE2B /* Extensions.swift */,
+				EF3B344325F92A6B00C1FE2B /* SettingCell.swift */,
+				EF7CD64524B608C80011442D /* Main.storyboard */,
+				EF7CD64824B608CD0011442D /* Assets.xcassets */,
+				EF5360502582303500C9C495 /* Label */,
+				EF78127A25540FAF002BD4B3 /* UsdLab */,
+				EF49E56F254858E500D87D81 /* UsdzFile */,
+				EF7CD64124B608C80011442D /* art.scnassets */,
+				EF7CD64A24B608CD0011442D /* LaunchScreen.storyboard */,
+				EFC2C08425C021C20075BED2 /* ScreenSound.mp3 */,
+				EF7CD64D24B608CD0011442D /* Info.plist */,
+			);
+			path = ARKitVisionObjectDetection;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7CD63B24B608C80011442D /* ARKitVisionObjectDetection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7CD65024B608CE0011442D /* Build configuration list for PBXNativeTarget "ARKitVisionObjectDetection" */;
+			buildPhases = (
+				EF7CD63824B608C80011442D /* Sources */,
+				EF7CD63924B608C80011442D /* Frameworks */,
+				EF7CD63A24B608C80011442D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARKitVisionObjectDetection;
+			productName = ARKitVisionObjectDetection;
+			productReference = EF7CD63C24B608C80011442D /* ARKitVisionObjectDetection.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7CD63424B608C80011442D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = Rozengain;
+				TargetAttributes = {
+					EF7CD63B24B608C80011442D = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = EF7CD63724B608C80011442D /* Build configuration list for PBXProject "ARKitVisionObjectDetection" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7CD63324B608C80011442D;
+			productRefGroup = EF7CD63D24B608C80011442D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7CD63B24B608C80011442D /* ARKitVisionObjectDetection */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF7CD63A24B608C80011442D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE73B3D25FA67F8008D6DA7 /* art.scnassets in Resources */,
+				EF781287255414DC002BD4B3 /* bottoni.usdz in Resources */,
+				EF7CD64C24B608CD0011442D /* LaunchScreen.storyboard in Resources */,
+				EF78128425541367002BD4B3 /* pallet.usdz in Resources */,
+				EF60817024CF181600D6A533 /* labelBook.sks in Resources */,
+				EF4B8CF424D5AB5F00071EAD /* labelDefault.sks in Resources */,
+				EFC2C08525C021C20075BED2 /* ScreenSound.mp3 in Resources */,
+				EF7CD64924B608CD0011442D /* Assets.xcassets in Resources */,
+				EF7CD64724B608C80011442D /* Main.storyboard in Resources */,
+				EF8A3F9F2591FB4E004D9312 /* Book.usdz in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7CD63824B608C80011442D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8A3FA22592018E004D9312 /* ViewControllerComponents.swift in Sources */,
+				EF8F2FD0259B4AC800A66900 /* ViewControllerAlert.swift in Sources */,
+				EF84658B25A74F7F0098CD86 /* Gesture.swift in Sources */,
+				EF3B344725F92BA600C1FE2B /* BaseCell.swift in Sources */,
+				EF7CD64424B608C80011442D /* ViewController.swift in Sources */,
+				EF867A4925AF2D340087125B /* ViewControllerMessage.swift in Sources */,
+				EF7B384B272979B70090FFB5 /* ViewControllerExplode.swift in Sources */,
+				EF3B344425F92A6B00C1FE2B /* SettingCell.swift in Sources */,
+				EF8F2FD4259B804F00A66900 /* ViewControllerModel.swift in Sources */,
+				EF3B344E25F92DE900C1FE2B /* Extensions.swift in Sources */,
+				EF8A8D1A25B74E660094B66A /* ViewControllerInfo.swift in Sources */,
+				EF7CD64024B608C80011442D /* AppDelegate.swift in Sources */,
+				EF8F2FCD259B49F000A66900 /* ViewControllerReset.swift in Sources */,
+				EF703E82260500BE00CE15B5 /* Setting.swift in Sources */,
+				EF8F2FC5259B3EE800A66900 /* ViewControllerFlash.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF7CD64524B608C80011442D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7CD64624B608C80011442D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF7CD64A24B608CD0011442D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7CD64B24B608CD0011442D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF7CD64E24B608CD0011442D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF7CD64F24B608CE0011442D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF7CD65124B608CE0011442D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y8FB9L7V9B;
+				INFOPLIST_FILE = ARKitVisionObjectDetection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Desktop.ARKitVisionObjectDetection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF7CD65224B608CE0011442D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y8FB9L7V9B;
+				INFOPLIST_FILE = ARKitVisionObjectDetection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Desktop.ARKitVisionObjectDetection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7CD63724B608C80011442D /* Build configuration list for PBXProject "ARKitVisionObjectDetection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7CD64E24B608CD0011442D /* Debug */,
+				EF7CD64F24B608CE0011442D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7CD65024B608CE0011442D /* Build configuration list for PBXNativeTarget "ARKitVisionObjectDetection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7CD65124B608CE0011442D /* Debug */,
+				EF7CD65224B608CE0011442D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF7CD63424B608C80011442D /* Project object */;
+}
